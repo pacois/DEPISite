@@ -1,4 +1,0 @@
-DEPISite
-========
-
-Website para posgrado
