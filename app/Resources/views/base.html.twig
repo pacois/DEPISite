@@ -2,12 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Bienvenido al sitio de posgrado e investigacion !!!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/portada/css/master.css') }}" />
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container_12">
+            <header class="grid_12">{% block encabezado %}{% endblock %}</header>
+            <div class="clear"></div>
+            <nav class="grid_9 push_3">{% block menu %}{% endblock %}</nav>
+            <article>
+                <div class="clear"></div>
+                <section>
+                    <div class="grid_3" id="panel_aux">{% block panel %}{% endblock %}</div>
+                    <div class="grid_9" id="contenido_general">{% block contenido %}{% endblock %}</div>
+                </section>
+            </article>
+            <article>
+                <div class="clear"></div>
+                <section>
+                    <div class="grid_3 push_3" id="enlace_1">{% block enlace_1 %}{% endblock %}</div>
+                    <div class="grid_3 push_3" id="enlace_2">{% block enlace_2 %}{% endblock %}</div>
+                    <div class="grid_3 push_3" id="enlace_3">{% block enlace_3 %}{% endblock %}</div>
+                </section>
+                <div class="clear"></div>
+            </article>    
+            <footer class="grid_12">{% block pie_de_pagina %}{% endblock %}</footer>
+        </div>
+        {% block javascripts %}
+            <script src="{{ asset('bundles/portada/js/config.js') }}"></script>
+            <script src="{{ asset('bundles/portada/js/adapt.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
