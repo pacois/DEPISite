@@ -1,4 +1,4 @@
 DEPISite
 ========
 
-Website para posgrado
+Clase de MVC. En analisis.
