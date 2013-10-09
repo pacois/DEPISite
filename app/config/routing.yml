@@ -1,3 +1,19 @@
+lineas_investigacion:
+    resource: "@LineasInvestigacionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+proyectos:
+    resource: "@ProyectosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+alumnos:
+    resource: "@AlumnosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+investigadores:
+    resource: "@InvestigadoresBundle/Resources/config/routing.yml"
+    prefix:   /
+
 portada:
     resource: "@PortadaBundle/Resources/config/routing.yml"
     prefix:   /
