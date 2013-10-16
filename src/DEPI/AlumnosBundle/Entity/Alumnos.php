@@ -211,4 +211,9 @@ class Alumnos
     {
         return $this->telefono;
     }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

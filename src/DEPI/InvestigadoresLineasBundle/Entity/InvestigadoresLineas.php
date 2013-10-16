@@ -112,4 +112,9 @@ class InvestigadoresLineas
     {
         return $this->rol;
     }
+
+    public function __toString()
+    {
+        return $this->getRol();
+    }
 }

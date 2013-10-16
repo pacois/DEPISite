@@ -271,4 +271,9 @@ class Proyectos
     {
         return $this->status;
     }
+
+    public function __toString()
+    {
+        return $this->getNombreCorto();
+    }    
 }

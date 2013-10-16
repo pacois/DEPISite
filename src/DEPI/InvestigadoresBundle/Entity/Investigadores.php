@@ -241,4 +241,9 @@ class Investigadores
     {
         return $this->sni;
     }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }
