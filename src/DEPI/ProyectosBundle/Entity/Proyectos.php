@@ -45,14 +45,14 @@ class Proyectos
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre_corto", type="string", length=80)
+     * @ORM\Column(name="nombre_corto", type="string", length=40)
      */
     private $nombre_corto;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre_completo", type="text")
+     * @ORM\Column(name="nombre_completo", type="string", length=80)
      */
     private $nombre_completo;
 
@@ -73,9 +73,9 @@ class Proyectos
     /**
      * @var boolean
      *
-     * @ORM\Column(name="vigencia", type="boolean")
+     * @ORM\Column(name="status", type="boolean")
      */
-    private $vigencia;
+    private $status;
 
 
     /**
@@ -250,25 +250,25 @@ class Proyectos
     }
 
     /**
-     * Set vigencia
+     * Set status
      *
-     * @param boolean $vigencia
+     * @param boolean $status
      * @return Proyectos
      */
-    public function setVigencia($vigencia)
+    public function setStatus($status)
     {
-        $this->vigencia = $vigencia;
+        $this->status = $status;
     
         return $this;
     }
 
     /**
-     * Get vigencia
+     * Get status
      *
      * @return boolean 
      */
-    public function getVigencia()
+    public function getStatus()
     {
-        return $this->vigencia;
+        return $this->status;
     }
 }

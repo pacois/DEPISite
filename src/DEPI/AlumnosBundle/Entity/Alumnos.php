@@ -26,7 +26,7 @@ class Alumnos
      *
      * @ORM\Column(name="no_control", type="string", length=10)
      */
-    private $no_control;
+    private $noControl;
 
     /**
      * @var string
@@ -40,14 +40,14 @@ class Alumnos
      *
      * @ORM\Column(name="apellido_paterno", type="string", length=30)
      */
-    private $apellido_paterno;
+    private $apellidoPaterno;
 
     /**
      * @var string
      *
      * @ORM\Column(name="apellido_materno", type="string", length=30)
      */
-    private $apellido_materno;
+    private $apellidoMaterno;
 
     /**
      * @var string
@@ -82,7 +82,7 @@ class Alumnos
      */
     public function setNoControl($noControl)
     {
-        $this->no_control = $noControl;
+        $this->noControl = $noControl;
     
         return $this;
     }
@@ -94,7 +94,7 @@ class Alumnos
      */
     public function getNoControl()
     {
-        return $this->no_control;
+        return $this->noControl;
     }
 
     /**
@@ -128,7 +128,7 @@ class Alumnos
      */
     public function setApellidoPaterno($apellidoPaterno)
     {
-        $this->apellido_paterno = $apellidoPaterno;
+        $this->apellidoPaterno = $apellidoPaterno;
     
         return $this;
     }
@@ -140,7 +140,7 @@ class Alumnos
      */
     public function getApellidoPaterno()
     {
-        return $this->apellido_paterno;
+        return $this->apellidoPaterno;
     }
 
     /**
@@ -151,7 +151,7 @@ class Alumnos
      */
     public function setApellidoMaterno($apellidoMaterno)
     {
-        $this->apellido_materno = $apellidoMaterno;
+        $this->apellidoMaterno = $apellidoMaterno;
     
         return $this;
     }
@@ -163,7 +163,7 @@ class Alumnos
      */
     public function getApellidoMaterno()
     {
-        return $this->apellido_materno;
+        return $this->apellidoMaterno;
     }
 
     /**
