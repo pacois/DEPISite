@@ -1,3 +1,7 @@
+alumnos_proyectos:
+    resource: "@AlumnosProyectosBundle/Resources/config/routing.yml"
+    prefix:   /
+
 lineas_investigacion:
     resource: "@LineasInvestigacionBundle/Resources/config/routing.yml"
     prefix:   /
