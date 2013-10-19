@@ -4,36 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <title>{% block title %}Bienvenido al sitio de posgrado e investigacion !!!{% endblock %}</title>
-  <link rel="stylesheet" href="{{ asset('bundles/portada/css/master.css') }}" />
-  <noscript>
-    <link rel="stylesheet" href="{{ asset('bundles/portada/css/mobile.min.css') }}" />
-  </noscript>
   {% block stylesheets %}{% endblock %}
 </head>
 <body>
-  <div class="container_12">
-    <header class="grid_12">{% block encabezado %}{% endblock %}</header>
-    <div class="clear"></div>
-    <nav class="grid_9 push_3">{% block menu %}{% endblock %}</nav>
-    <article>
-        <div class="clear"></div>
-        <section>
-            <div class="grid_3" id="panel_aux">{% block panel %}{% endblock %}</div>
-            <div class="grid_9" id="contenido_general">{% block contenido %}{% endblock %}</div>
-        </section>
-    </article>
-    <article>
-        <div class="clear"></div>
-        <section>
-            <div class="grid_3 push_3" id="enlace_1">{% block enlace_1 %}{% endblock %}</div>
-            <div class="grid_3 push_3" id="enlace_2">{% block enlace_2 %}{% endblock %}</div>
-            <div class="grid_3 push_3" id="enlace_3">{% block enlace_3 %}{% endblock %}</div>
-        </section>
-    </article>    
-    <footer class="grid_12">{% block pie_de_pagina %}{% endblock %}</footer>
-  </div>
-  <script src="{{ asset('bundles/portada/js/config.js') }}"></script>
-  <script src="{{ asset('bundles/portada/js/adapt.min.js') }}"></script>
-  {% block javascripts %}{% endblock %}
+   {% block body %}{% endblock %}
+   {% block javascripts %}{% endblock %}
 </body>
 </html>
