@@ -21,12 +21,12 @@ class InvestigadoresLineas
      */
     private $id;
 
-    /** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity") 
+    /** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity\Investigadores") 
      *  @ORM\JoinColumn(name="investigadores", referencedColumnName="id")
      */
     private $investigadores;
 
-    /** @ORM\ManyToOne(targetEntity="DEPI\LineasInvestigacionBundle\Entity") 
+    /** @ORM\ManyToOne(targetEntity="DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion") 
      *  @ORM\JoinColumn(name="lineasinvestigacion", referencedColumnName="id")
      */
     private $lineasinvestigacion;
