@@ -21,7 +21,7 @@ class InvestigadoresLineas
      */
     private $id;
 
-	/** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity\Investigadores") 
+    /** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity\Investigadores") 
      *  @ORM\JoinColumn(name="investigadores", referencedColumnName="id")
      */
     private $investigadores;
@@ -54,9 +54,9 @@ class InvestigadoresLineas
      * @param \DEPI\InvestigadoresBundle\Entity\Investigadores
      * @return InvestigadoresLineas
      */
-    public function setInvestigadores(\DEPI\InvestigadoresLineasBundle\Entity\Investigadores $investigadores)
+    public function setInvestigadores(\DEPI\InvestigadoresBundle\Entity\Investigadores $investigadores)
     {
-        $this->investigadores = $Investigadores;
+        $this->investigadores = $investigadores;
     }
 
     /**
@@ -75,7 +75,7 @@ class InvestigadoresLineas
      * @param \DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion
      * @return InvestigadoresLineas
      */
-    public function setLineasInvestigacion(\DEPI\InvestigadoresLineasBundle\Entity\LineasInvestigacion $lineasinvestigacion)
+    public function setLineasInvestigacion(\DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion $lineasinvestigacion)
     {
         $this->lineasinvestigacion = $lineasinvestigacion;
     }
@@ -94,7 +94,7 @@ class InvestigadoresLineas
      * Set rol
      *
      * @param string $rol
-     * @return Alumno
+     * @return InvestigadoresLineas
      */
     public function setRol($rol)
     {
