@@ -58,7 +58,7 @@ class AlumnosProyectos
     /**
      * Get idAlumno
      *
-     * @return integer 
+     * @return \DEPI\AlumnosBundle\Entity\Alumnos
      */
     public function getIdAlumno()
     {
@@ -81,7 +81,7 @@ class AlumnosProyectos
     /**
      * Get idProyecto
      *
-     * @return integer 
+     * @return \DEPI\ProyectosBundle\Entity\Proyectos 
      */
     public function getIdProyecto()
     {
