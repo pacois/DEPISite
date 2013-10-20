@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * InvestigadoresLineas
  *
- * @ORM\Table()
+ * @ORM\Table(name="investigadoreslineas")
  * @ORM\Entity
  */
 class InvestigadoresLineas
@@ -21,17 +21,13 @@ class InvestigadoresLineas
      */
     private $id;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="investigadores", type="integer")
+    /** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity") 
+     *  @ORM\JoinColumn(name="investigadores", referencedColumnName="id")
      */
     private $investigadores;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="lineasinvestigacion", type="integer")
+    /** @ORM\ManyToOne(targetEntity="DEPI\LineasInvestigacionBundle\Entity") 
+     *  @ORM\JoinColumn(name="lineasinvestigacion", referencedColumnName="id")
      */
     private $lineasinvestigacion;
 
@@ -56,20 +52,18 @@ class InvestigadoresLineas
     /**
      * Set investigadores
      *
-     * @param integer $investigadores
+     * @param \DEPI\InvestigadoresBundle\Entity\Investigadores
      * @return InvestigadoresLineas
      */
-    public function setInvestigadores($investigadores)
+    public function setInvestigadores(\DEPI\InvestigadoresBundle\Entity\Investigadores $investigadores)
     {
         $this->investigadores = $investigadores;
-    
-        return $this;
     }
 
     /**
      * Get investigadores
      *
-     * @return integer 
+     * @return \DEPI\InvestigadoresBundle\Entity\Investigadores
      */
     public function getInvestigadores()
     {
@@ -79,20 +73,18 @@ class InvestigadoresLineas
     /**
      * Set lineasinvestigacion
      *
-     * @param integer $lineasinvestigacion
+     * @param \DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion
      * @return InvestigadoresLineas
      */
-    public function setLineasinvestigacion($lineasinvestigacion)
+    public function setLineasinvestigacion(\DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion $lineasinvestigacion)
     {
         $this->lineasinvestigacion = $lineasinvestigacion;
-    
-        return $this;
     }
 
     /**
      * Get lineasinvestigacion
      *
-     * @return integer 
+     * @return \DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion
      */
     public function getLineasinvestigacion()
     {
