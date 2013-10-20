@@ -51,8 +51,6 @@ class AlumnosProyectos
     public function setIdAlumno(\DEPI\AlumnosBundle\Entity\Alumnos $alumnos)
     {
         $this->idAlumno = $idAlumno;
-    
-        return $this;
     }
 
     /**
@@ -74,8 +72,6 @@ class AlumnosProyectos
     public function setIdProyecto(\DEPI\ProyectosBundle\Entity\Proyectos $idProyecto)
     {
         $this->idProyecto = $idProyecto;
-    
-        return $this;
     }
 
     /**
