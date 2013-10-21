@@ -1,3 +1,7 @@
+areas:
+    resource: "@AreasBundle/Resources/config/routing.yml"
+    prefix:   /
+
 investigadores_lineas:
     resource: "@InvestigadoresLineasBundle/Resources/config/routing.yml"
     prefix:   /
