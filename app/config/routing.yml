@@ -1,3 +1,7 @@
+areas_proyectos:
+    resource: "@AreasProyectosBundle/Resources/config/routing.yml"
+    prefix:   /
+
 areas:
     resource: "@AreasBundle/Resources/config/routing.yml"
     prefix:   /

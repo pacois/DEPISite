@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new DEPI\InvestigadoresLineasBundle\InvestigadoresLineasBundle(),
             new DEPI\AreasBundle\AreasBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new DEPI\AreasProyectosBundle\AreasProyectosBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

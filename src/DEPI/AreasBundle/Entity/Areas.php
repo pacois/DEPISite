@@ -28,18 +28,12 @@ class Areas
      */
     private $nombre;
 
-    /** @ORM\ManyToOne(targetEntity="DEPI\ProyectosBundle\Entity\Proyectos") 
-     *  @ORM\JoinColumn(name="proyecto", referencedColumnName="id")
-     */
-    private $proyecto;
-
     /**
      * @var string
      *
      * @ORM\Column(name="descripcion", type="text")
      */
     private $descripcion;
-
 
     /**
      * Get id
@@ -72,27 +66,6 @@ class Areas
     public function getNombre()
     {
         return $this->nombre;
-    }
-
-    /**
-     * Set proyecto
-     *
-     * @param \DEPI\ProyectosBundle\Entity\Proyectos
-     * @return Areas
-     */
-    public function setProyecto(\DEPI\ProyectosBundle\Entity\Proyectos $proyecto)
-    {
-        $this->proyecto = $proyecto;
-    }
-
-    /**
-     * Get proyecto
-     *
-     * @return \DEPI\ProyectosBundle\Entity\Proyectos 
-     */
-    public function getProyecto()
-    {
-        return $this->proyecto;
     }
 
     /**
