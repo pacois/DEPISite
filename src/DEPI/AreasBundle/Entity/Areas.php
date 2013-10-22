@@ -24,7 +24,7 @@ class Areas
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=120)
+     * @ORM\Column(name="nombre", type="string", length=255)
      */
     private $nombre;
 
