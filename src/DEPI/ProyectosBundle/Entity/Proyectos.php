@@ -71,6 +71,13 @@ class Proyectos
     private $fecha_apertura;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_termino", type="date")
+     */
+    private $fecha_termino;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="status", type="boolean")
@@ -247,6 +254,29 @@ class Proyectos
     public function getFechaApertura()
     {
         return $this->fecha_apertura;
+    }
+
+    /**
+     * Set fecha_termino
+     *
+     * @param \DateTime $fechaTermino
+     * @return Proyectos
+     */
+    public function setFechaTermino($fechaTermino)
+    {
+        $this->fecha_termino = $fechaTermino;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha_termino
+     *
+     * @return \DateTime 
+     */
+    public function getFechaTermino()
+    {
+        return $this->fecha_termino;
     }
 
     /**
