@@ -1,4 +1,3 @@
 DEPISite
-========
-Hola desde consola.... prueba 
-Clase de MVC. En analisis.
+
+Repositorio del sitio web para posgrado del ITM. El sitio se encuentra en etapa de desarrollo y se construye utilizando Symfony2.
