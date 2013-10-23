@@ -21,7 +21,7 @@ class ProyectosProductos
      */
     private $id;
 
-    /** @ORM\OneToOne(targetEntity="DEPI\ProyectosBundle\Entity\Proyectos") 
+    /** @ORM\ManyToOne(targetEntity="DEPI\ProyectosBundle\Entity\Proyectos") 
      *  @ORM\JoinColumn(name="proyecto", referencedColumnName="id")
      */
     private $proyecto;
