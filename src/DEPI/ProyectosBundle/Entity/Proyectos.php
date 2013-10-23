@@ -218,6 +218,52 @@ class Proyectos
     }
 
     /**
+     * Set objetivo_general
+     *
+     * @param string $objetivo_general
+     * @return Proyectos
+     */
+    public function setObjetivoGeneral($objetivo_general)
+    {
+        $this->objetivo_general = $objetivo_general;
+    
+        return $this;
+    }
+
+    /**
+     * Get objetivo_general
+     *
+     * @return string 
+     */
+    public function getObjetivoGeneral()
+    {
+        return $this->meta;
+    }
+
+    /**
+     * Set objetivos_especificos
+     *
+     * @param string $objetivos_especificos
+     * @return Proyectos
+     */
+    public function setObjetivosEspecificos($objetivos_especificos)
+    {
+        $this->objetivos_especificos = $objetivos_especificos;
+    
+        return $this;
+    }
+
+    /**
+     * Get objetivos_especificos
+     *
+     * @return string 
+     */
+    public function getObjetivosEspecificos()
+    {
+        return $this->objetivos_especificos;
+    }
+
+    /**
      * Set fecha_apertura
      *
      * @param \DateTime $fechaApertura
