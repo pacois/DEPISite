@@ -61,4 +61,9 @@ class ProductosAcademicos
     {
         return $this->meta;
     }
+
+    public function __toString()
+    {
+        return $this->getMeta();
+    }   
 }
