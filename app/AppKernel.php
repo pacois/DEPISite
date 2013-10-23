@@ -24,8 +24,13 @@ class AppKernel extends Kernel
             new DEPI\AlumnosProyectosBundle\AlumnosProyectosBundle(),
             new DEPI\InvestigadoresLineasBundle\InvestigadoresLineasBundle(),
             new DEPI\AreasBundle\AreasBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new DEPI\AreasProyectosBundle\AreasProyectosBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
