@@ -1,3 +1,11 @@
+proyectos_productos:
+    resource: "@ProyectosProductosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+productos_academicos:
+    resource: "@ProductosAcademicosBundle/Resources/config/routing.yml"
+    prefix:   /
+
 areas_proyectos:
     resource: "@AreasProyectosBundle/Resources/config/routing.yml"
     prefix:   /

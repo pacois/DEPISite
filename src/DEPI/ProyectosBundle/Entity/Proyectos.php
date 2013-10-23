@@ -45,7 +45,7 @@ class Proyectos
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre_corto", type="string", length=40)
+     * @ORM\Column(name="nombre_corto", type="string", length=30)
      */
     private $nombre_corto;
 
@@ -59,9 +59,16 @@ class Proyectos
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion", type="text")
+     * @ORM\Column(name="objetivo_general", type="string", length=80)
      */
-    private $descripcion;
+    private $objetivo_general;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="objetivos_especificos", type="text")
+     */
+    private $objetivos_especificos;
 
     /**
      * @var \DateTime
@@ -208,29 +215,6 @@ class Proyectos
     public function getNombreCompleto()
     {
         return $this->nombre_completo;
-    }
-
-    /**
-     * Set descripcion
-     *
-     * @param string $descripcion
-     * @return Proyectos
-     */
-    public function setDescripcion($descripcion)
-    {
-        $this->descripcion = $descripcion;
-    
-        return $this;
-    }
-
-    /**
-     * Get descripcion
-     *
-     * @return string 
-     */
-    public function getDescripcion()
-    {
-        return $this->descripcion;
     }
 
     /**
