@@ -21,17 +21,13 @@ class ProyectosProductos
      */
     private $id;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="proyecto", type="integer")
+    /** @ORM\OneToOne(targetEntity="DEPI\ProyectosBundle\Entity\Proyectos") 
+     *  @ORM\JoinColumn(name="proyecto", referencedColumnName="id")
      */
     private $proyecto;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="producto_academico", type="integer")
+    /** @ORM\ManyToOne(targetEntity="DEPI\ProductosAcademicosBundle\Entity\ProductosAcademicos") 
+     *  @ORM\JoinColumn(name="productoAcademico", referencedColumnName="id")
      */
     private $productoAcademico;
 
@@ -70,20 +66,18 @@ class ProyectosProductos
     /**
      * Set proyecto
      *
-     * @param integer $proyecto
+     * @param \DEPI\ProyectosBundle\Entity\Proyectos
      * @return ProyectosProductos
      */
-    public function setProyecto($proyecto)
+    public function setProyecto(\DEPI\ProyectosBundle\Entity\Proyectos $proyecto)
     {
         $this->proyecto = $proyecto;
-    
-        return $this;
     }
 
     /**
      * Get proyecto
      *
-     * @return integer 
+     * @return \DEPI\ProyectosBundle\Entity\Proyectos
      */
     public function getProyecto()
     {
@@ -93,20 +87,18 @@ class ProyectosProductos
     /**
      * Set productoAcademico
      *
-     * @param integer $productoAcademico
+     * @param \DEPI\ProductosAcademicosBundle\Entity\ProductosAcademicos
      * @return ProyectosProductos
      */
-    public function setProductoAcademico($productoAcademico)
+    public function setProductoAcademico(\DEPI\ProductosAcademicosBundle\Entity\ProductosAcademicos $productoAcademico)
     {
         $this->productoAcademico = $productoAcademico;
-    
-        return $this;
     }
 
     /**
      * Get productoAcademico
      *
-     * @return integer 
+     * @return \DEPI\ProductosAcademicosBundle\Entity\ProductosAcademicos
      */
     public function getProductoAcademico()
     {
