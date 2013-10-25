@@ -45,7 +45,7 @@ class Proyectos
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre_corto", type="string", length=40)
+     * @ORM\Column(name="nombre_corto", type="string", length=30)
      */
     private $nombre_corto;
 
@@ -59,9 +59,16 @@ class Proyectos
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion", type="text")
+     * @ORM\Column(name="objetivo_general", type="string", length=80)
      */
-    private $descripcion;
+    private $objetivo_general;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="objetivos_especificos", type="text")
+     */
+    private $objetivos_especificos;
 
     /**
      * @var \DateTime
@@ -69,6 +76,13 @@ class Proyectos
      * @ORM\Column(name="fecha_apertura", type="date")
      */
     private $fecha_apertura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_termino", type="date")
+     */
+    private $fecha_termino;
 
     /**
      * @var boolean
@@ -204,26 +218,49 @@ class Proyectos
     }
 
     /**
-     * Set descripcion
+     * Set objetivo_general
      *
-     * @param string $descripcion
+     * @param string $objetivo_general
      * @return Proyectos
      */
-    public function setDescripcion($descripcion)
+    public function setObjetivoGeneral($objetivo_general)
     {
-        $this->descripcion = $descripcion;
+        $this->objetivo_general = $objetivo_general;
     
         return $this;
     }
 
     /**
-     * Get descripcion
+     * Get objetivo_general
      *
      * @return string 
      */
-    public function getDescripcion()
+    public function getObjetivoGeneral()
     {
-        return $this->descripcion;
+        return $this->meta;
+    }
+
+    /**
+     * Set objetivos_especificos
+     *
+     * @param string $objetivos_especificos
+     * @return Proyectos
+     */
+    public function setObjetivosEspecificos($objetivos_especificos)
+    {
+        $this->objetivos_especificos = $objetivos_especificos;
+    
+        return $this;
+    }
+
+    /**
+     * Get objetivos_especificos
+     *
+     * @return string 
+     */
+    public function getObjetivosEspecificos()
+    {
+        return $this->objetivos_especificos;
     }
 
     /**
@@ -247,6 +284,29 @@ class Proyectos
     public function getFechaApertura()
     {
         return $this->fecha_apertura;
+    }
+
+    /**
+     * Set fecha_termino
+     *
+     * @param \DateTime $fechaTermino
+     * @return Proyectos
+     */
+    public function setFechaTermino($fechaTermino)
+    {
+        $this->fecha_termino = $fechaTermino;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha_termino
+     *
+     * @return \DateTime 
+     */
+    public function getFechaTermino()
+    {
+        return $this->fecha_termino;
     }
 
     /**

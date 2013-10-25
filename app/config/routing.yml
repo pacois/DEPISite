@@ -1,3 +1,23 @@
+proyectos_productos:
+    resource: "@ProyectosProductosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+productos_academicos:
+    resource: "@ProductosAcademicosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+areas_proyectos:
+    resource: "@AreasProyectosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+areas:
+    resource: "@AreasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+investigadores_lineas:
+    resource: "@InvestigadoresLineasBundle/Resources/config/routing.yml"
+    prefix:   /
+
 alumnos_proyectos:
     resource: "@AlumnosProyectosBundle/Resources/config/routing.yml"
 
@@ -24,4 +44,13 @@ investigadores:
 portada:
     resource: "@PortadaBundle/Resources/config/routing.yml"
     prefix:   /
+
+sonata:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
 

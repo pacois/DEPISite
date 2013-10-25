@@ -22,6 +22,17 @@ class AppKernel extends Kernel
             new DEPI\ProyectosBundle\ProyectosBundle(),
             new DEPI\LineasInvestigacionBundle\LineasInvestigacionBundle(),
             new DEPI\AlumnosProyectosBundle\AlumnosProyectosBundle(),
+            new DEPI\InvestigadoresLineasBundle\InvestigadoresLineasBundle(),
+            new DEPI\AreasBundle\AreasBundle(),
+            new DEPI\AreasProyectosBundle\AreasProyectosBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new DEPI\ProductosAcademicosBundle\ProductosAcademicosBundle(),
+            new DEPI\ProyectosProductosBundle\ProyectosProductosBundle(),
             new DEPI\InvestigadorProyectoBundle\InvestigadorProyectoBundle(),
         );
 

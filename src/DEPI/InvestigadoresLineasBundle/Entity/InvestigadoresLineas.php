@@ -21,7 +21,7 @@ class InvestigadoresLineas
      */
     private $id;
 
-	/** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity\Investigadores") 
+    /** @ORM\ManyToOne(targetEntity="DEPI\InvestigadoresBundle\Entity\Investigadores") 
      *  @ORM\JoinColumn(name="investigadores", referencedColumnName="id")
      */
     private $investigadores;
@@ -37,6 +37,7 @@ class InvestigadoresLineas
      * @ORM\Column(name="rol", type="string", length=20)
      */
     private $rol;
+
 
     /**
      * Get id
@@ -54,13 +55,13 @@ class InvestigadoresLineas
      * @param \DEPI\InvestigadoresBundle\Entity\Investigadores
      * @return InvestigadoresLineas
      */
-    public function setInvestigadores(\DEPI\InvestigadoresLineasBundle\Entity\Investigadores $investigadores)
+    public function setInvestigadores(\DEPI\InvestigadoresBundle\Entity\Investigadores $investigadores)
     {
-        $this->investigadores = $Investigadores;
+        $this->investigadores = $investigadores;
     }
 
     /**
-     * Get Investigadores
+     * Get investigadores
      *
      * @return \DEPI\InvestigadoresBundle\Entity\Investigadores
      */
@@ -75,17 +76,17 @@ class InvestigadoresLineas
      * @param \DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion
      * @return InvestigadoresLineas
      */
-    public function setLineasInvestigacion(\DEPI\InvestigadoresLineasBundle\Entity\LineasInvestigacion $lineasinvestigacion)
+    public function setLineasinvestigacion(\DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion $lineasinvestigacion)
     {
         $this->lineasinvestigacion = $lineasinvestigacion;
     }
 
     /**
-     * Get Investigadores
+     * Get lineasinvestigacion
      *
      * @return \DEPI\LineasInvestigacionBundle\Entity\LineasInvestigacion
      */
-    public function getLineasInvestigacion()
+    public function getLineasinvestigacion()
     {
         return $this->lineasinvestigacion;
     }
@@ -94,7 +95,7 @@ class InvestigadoresLineas
      * Set rol
      *
      * @param string $rol
-     * @return Alumno
+     * @return InvestigadoresLineas
      */
     public function setRol($rol)
     {
@@ -111,10 +112,5 @@ class InvestigadoresLineas
     public function getRol()
     {
         return $this->rol;
-    }
-
-    public function __toString()
-    {
-        return $this->getRol();
     }
 }
